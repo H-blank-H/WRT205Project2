@@ -69,7 +69,8 @@ code {
 .feature-band,
 .video-card,
 .note-card,
-.about-panel {
+.about-panel,
+.document-card {
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
 }
@@ -214,7 +215,8 @@ main {
 .video-card,
 .feature-band,
 .note-card,
-.about-panel {
+.about-panel,
+.document-card {
   background: var(--surface);
   border: 1px solid rgba(255, 255, 255, 0.48);
   box-shadow: var(--shadow);
@@ -277,7 +279,8 @@ main {
 
 .episode-section,
 .notes-section,
-.about-section {
+.about-section,
+.documents-section {
   margin-top: 112px;
 }
 
@@ -348,6 +351,37 @@ main {
   border-radius: var(--radius-xl);
 }
 
+.documents-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.document-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 28px;
+  border-radius: var(--radius-xl);
+}
+
+.document-card h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  letter-spacing: -0.04em;
+}
+
+.document-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.document-card .button {
+  align-self: flex-start;
+  margin-top: 10px;
+}
+
 .about-panel p {
   margin: 0 0 14px;
   color: var(--muted);
@@ -376,7 +410,8 @@ main {
   .about-section,
   .video-card,
   .notes-grid,
-  .feature-band {
+  .feature-band,
+  .documents-grid {
     grid-template-columns: 1fr;
   }
 
@@ -418,13 +453,15 @@ main {
   .feature-band,
   .video-card,
   .note-card,
-  .about-panel {
+  .about-panel,
+  .document-card {
     padding: 20px;
   }
 
   .episode-section,
   .notes-section,
   .about-section,
+  .documents-section,
   .site-footer {
     margin-top: 88px;
   }
